@@ -12,7 +12,7 @@ public class Main {
         for (int i = 0; i < n; i++) {
             System.out.print("Enter element no." + (i + 1) + " : ");
             int temp = sc.nextInt();
-            v.addElement(new Integer.valueOf(temp));
+            v.addElement(new Integer(temp));
         }
         System.out.print("Enter the number of element to find frequency of: ");
         int x = sc.nextInt();
@@ -20,7 +20,7 @@ public class Main {
         int count = 0;
 
         for (int i = 0; i < n; i++) {
-            if (v.elementAt(i) == x)
+            if ((int) v.elementAt(i) == x)
                 count++;
         }
         System.out.println("The frequency of element " + x + " in the vector is " + count);
