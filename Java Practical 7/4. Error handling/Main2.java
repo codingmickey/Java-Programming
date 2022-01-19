@@ -1,26 +1,40 @@
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.Scanner;
+import java.io.InputStreamReader;
 
-import javax.sound.midi.Track;
+public class Mian {
+    public static void main(String[] args) throws IOException {
+        int a, b, c;
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter 2 numbers: ");
 
-public class Main2 {
-    public static void main(String[] args) {
-
-        Scanner sc = new Scanner(System.in);
-        int m;
-
-        System.out.println("Enter a month: ");
-        m = sc.nextInt();
-
-        // throw keyword
         try {
-            if (m < 1 || m > 12)
-                throw new NumberFormatException();
-            System.out.println("Month is " + m);
-
+            a = Integer.parseInt(br.readLine());
+            b = Integer.parseInt(br.readLine());
+            c = a / b;
+            System.out.println("Division = " + c);
+        } catch (ArithmeticException e) {
+            System.out.println("Please don't divide by 0");
         } catch (NumberFormatException e) {
-            System.out.println("Enter a valid month");
+            System.out.println("Enter a vaild number");
+        } catch (Exception e) {
+            System.out.println(e);
+        } finally {
+            System.out.println("I am finally() block");
         }
 
+        // Nested try catch
+        try {
+            a = Integer.parseInt(br.readLine());
+            b = Integer.parseInt(br.readLine());
+            try {
+                c = a / b;
+                System.out.println("Division = " + c);
+            } catch (ArithmeticException e) {
+                System.out.println("Please don't divide by 0");
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("Enter a vaild number");
+        }
     }
 }

@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 import javax.sound.midi.Track;
 
-public class Main3 {
+public class Main2 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -15,19 +15,12 @@ public class Main3 {
         // throw keyword
         try {
             if (m < 1 || m > 12)
-                throw new MonthFormatException("Exception occured");
-
+                throw new NumberFormatException();
             System.out.println("Month is " + m);
 
-        } catch (MonthFormatException e) {
+        } catch (NumberFormatException e) {
             System.out.println("Enter a valid month");
         }
 
-    }
-}
-
-class MonthFormatException extends Exception {
-    MonthFormatException(String s) {
-        System.out.println(s);
     }
 }
