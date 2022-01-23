@@ -1,9 +1,7 @@
 import java.io.IOException;
 import java.util.Scanner;
 
-import javax.sound.midi.Track;
-
-public class Main2 {
+public class Main3 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
