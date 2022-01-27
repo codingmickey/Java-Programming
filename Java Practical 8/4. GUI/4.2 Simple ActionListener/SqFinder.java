@@ -25,7 +25,7 @@ class SqFinder extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent ae) {
         int a = Integer.parseInt(txt1.getText());
-        float s = a * a;
+        int s = a * a;
         lbl2.setText("Square = " + s);
     }
 
