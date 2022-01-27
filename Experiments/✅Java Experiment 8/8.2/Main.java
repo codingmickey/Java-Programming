@@ -1,5 +1,5 @@
 class Rectangle {
-    float length, breadth, area;
+    private float length, breadth;
 
     Rectangle() {
         length = 5f;
@@ -12,13 +12,12 @@ class Rectangle {
     }
 
     float area() {
-        area = length * breadth;
-        return area;
+        return length * breadth;
     }
 }
 
 class Cube {
-    float length, volume;
+    private float length;
 
     Cube() {
         length = 5f;
@@ -29,8 +28,7 @@ class Cube {
     }
 
     float volume() {
-        volume = (float) Math.pow(length, 3);
-        return volume;
+        return (float) Math.pow(length, 3);
     }
 }
 

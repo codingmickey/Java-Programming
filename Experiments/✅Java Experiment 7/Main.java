@@ -46,9 +46,9 @@ public class Main {
         for (int i = 0; i < x; i++) {
             for (int j = 0; j < x - i - 1; j++) {
                 if (s[j].total < s[j + 1].total) {
-                    int temp = s[j].total;
-                    s[j].total = s[j + 1].total;
-                    s[j + 1].total = temp;
+                    Student c = s[j];
+                    s[j] = s[j + 1];
+                    s[j + 1] = c;
                 }
             }
         }

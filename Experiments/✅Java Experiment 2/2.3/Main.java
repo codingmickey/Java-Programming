@@ -33,7 +33,7 @@ public class Main {
             if (i % 2 != 0)
                 System.out.print(i + " ");
         }
-        System.out.println("The prime numbers from " + a + " to " + b + " are -");
+        System.out.println("\n\nThe prime numbers from " + a + " to " + b + " are -");
         for (int i = a; i <= b; i++) {
             if (p.isPrime(i))
                 System.out.print(i + " ");
