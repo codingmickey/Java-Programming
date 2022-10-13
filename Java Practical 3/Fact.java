@@ -15,9 +15,7 @@ public class Fact {
 
         System.out.print("Enter a number: ");
         int n = sc.nextInt();
-
-        int f = Meth.fact(n);
-        System.out.print("Factorial = " + f);
+        System.out.print("Factorial = " + Meth.fact(n));
     }
 }
 
